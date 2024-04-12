@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #0E1514;
+
+}
+
+nav,
+footer {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    background-color: rgb(255, 255, 255);
+}
+
+nav {
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+#logo-link {
+    margin: 0 6% 0 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(69, 69, 69);
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.reg-auth-links {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: 150px;
+}
+
+#login {
+    width: 40px;
+    height: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+#menu-header,
+.reg-cont h2 {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: white;
+    background-color: #0DB296;
+    padding: 15px 35px;
+    border-radius: 50px;
+}
+
+#menu-header {
+    margin: 0 0 20px 0;
+}
+
+.row {
+    display: flex;
+    gap: 150px;
+    padding: 50px 0;
+
+}
+
+@media only screen and (max-width:1000px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+}
+
+.product h3 {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 600;
+}
+
+.product h4 {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 300;
+
+
+}
+
+.product button {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-image: url(images/bttn-bg.png);
+    background-size: cover;
+    outline: 4px #0f7966 solid;
+    outline-offset: -2px;
+    transition: 0.2s;
+}
+
+.product button:hover {
+    outline: 4px white solid;
+    outline-offset: -2px;
+    transition: 0.2s;
+
+}
+
+/* REGISTRATION */
+
+.reg-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0;
+}
+
+.reg-inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 35px;
+    padding: 2% 3%;
+    gap: 25px;
+}
+
+label {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.data-input {
+    border: 1px solid black;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.data-input::placeholder {
+    font-family: "Commissioner", sans-serif;
+    text-align: center;
+}
+
+#button-form {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #0DB295;
+    color: white;
+    transition: 0.2s;
+}
+
+#button-form:hover {
+    background-color: #0f7966;
+}
+
+.form-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.sign-in {
+    font-family: "Commissioner", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    gap: 10px;
+    margin: 15px 0 0 0;
+}
+
+.sign-in a {
+    text-decoration: none;
+    color: #0DB295;
+}
+
+/* FOOTER  */
+
+footer {
+    padding: 45px 0;
+    align-items: start;
+    justify-content: center;
+}
+
+.logo-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-cont p {
+    font-family: "Commissioner", sans-serif;
+    font-size: 15px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.links h3 {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 0 10px 0;
+    color: #0DB295;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: disc;
+    align-items: start;
+    margin: 0 0 0  18px;
+}
+
+.links a {
+    font-family: "Commissioner", sans-serif;
+    text-decoration: none;
+    color: black;
+}
