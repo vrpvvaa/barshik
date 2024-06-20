@@ -3,6 +3,9 @@
 require ("connect/connect.php");
 require ("connect/header.php");
 
+
+$prods = mysqli_fetch_all(mysqli_query($con, "SELECT * FROM Product"));
+
 ?>
 
 <!DOCTYPE html>
@@ -12,11 +15,6 @@ require ("connect/header.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Russo+One&display=swap"
-        rel="stylesheet">
     <title>FIZZ</title>
 </head>
 
@@ -28,50 +26,19 @@ require ("connect/header.php");
 
             <div class="menu">
                 <div class="row">
+
+                <?php foreach ($prods as $prod) { ?>
                     <div class="product">
-                        <img src="" alt="Изображение позиции">
-                        <h3>Коктейльчик</h3>
-                        <h4>150₽</h4>
-                        <button>Добавить <br> в корзину</button>
+                        <img src="images/<?=$prod[5]?>" alt="Изображение позиции">
+                        <h3><?=$prod[1]?></h3>
+                        <h4><?=$prod[4]?>₽</h4>
+                        <a class="link-prod-buy" href="add_product.php?id=<?=$prod[0]?>">Добавить <br> в корзину</a>
                     </div>
 
-                    <div class="product">
-                        <img src="" alt="Изображение позиции">
-                        <h3>Название</h3>
-                        <h4>Цена</h4>
-                        <button>Добавить <br> в корзину</button>
-                    </div>
+                    <?php } ?>
 
-                    <div class="product">
-                        <img src="" alt="Изображение позиции">
-                        <h3>Название</h3>
-                        <h4>Цена</h4>
-                        <button>Добавить <br> в корзину</button>
-                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="product">
-                        <img src="" alt="Изображение позиции">
-                        <h3>Название</h3>
-                        <h4>Цена</h4>
-                        <button>Добавить <br> в корзину</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="" alt="Изображение позиции">
-                        <h3>Название</h3>
-                        <h4>Цена</h4>
-                        <button>Добавить <br> в корзину</button>
-                    </div>
-
-                    <div class="product">
-                        <img src="" alt="Изображение позиции">
-                        <h3>Название</h3>
-                        <h4>Цена</h4>
-                        <button>Добавить <br> в корзину</button>
-                    </div>
-                </div>
 
             </div>
         </section>

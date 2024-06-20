@@ -1,5 +1,8 @@
 <?php
-require ("../connect/"); 
+session_start();
+
+require ("../connect/connect.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +18,9 @@ require ("../connect/");
 <body>
 
 <nav>
-        <a href="product-adm.php">Зарегистрироваться</a>
-        <a id="logo-link" href="../index.php"><img class="logo" src="../images/logo.png" alt="Лого"></a>
-        <a href="../connect/exit.php">Выйти</a>
+        <a href="product-adm.php"></a>
+        <a style="display:flex;"  id="logo-link" href="../index.php"><img style="align-self:center;" class="logo" src="../images/logo.png" alt="Лого"></a>
+        <a href="../reg-auth/exit.php">Выйти</a>
     </nav>
 
 <main>
@@ -25,7 +28,13 @@ require ("../connect/");
         <div class="admin-greet">
 
         <h2>Добро пожаловать, админ!</h2>
-        <h2>В меню навигации выберите необходимую страницу страницу :)</h2>
+        <h2>Выберите необходимую страницу :)</h2>
+
+        <nav id="adm-nav">
+            <a href="product-adm.php">Продукты</a>
+            <a href="category-adm.php">Категории</a>
+            <a href="order-adm.php">Заказы</a>
+        </nav>
 
 
         </div>

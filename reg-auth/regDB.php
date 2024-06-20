@@ -10,10 +10,9 @@ $user = mysqli_fetch_assoc($result); // Конвертируем в массив
 if(!empty($user)){
 	echo "<script>alert('Данная эл. почта уже используется!'); location.href = 'registration.php';</script>";
 } else {
-    mysqli_query($con,"INSERT INTO `Users`(`Email`, `Password_hash`, `Bonus_points`) VALUES ('$email','$pass','0')");
-    echo "<script>alert('Регистрация прошла успешно!')</script>";
-    $_SESSION["user_id"] = mysqli_insert_id($con);
-    header('Location:../user');
+    mysqli_query($con,"INSERT INTO `Users`(`Email`, `Password_hash`, `Bonus_points`, `Role`) VALUES ('$email','$pass','0', 'user')");
+    $_SESSION['mess']= "Регистрация прошла успешно!";
+    header('Location:authorization.php');
 }
 
 
